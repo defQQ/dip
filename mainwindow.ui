@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>622</width>
+    <height>448</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Размещение элементов</string>
+  </property>
+  <widget class="QWidget" name="mainWindowCentralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QGraphicsView" name="taskGraphicsView"/>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="infoVerticalLayout">
+      <item>
+       <widget class="QLabel" name="dataLabel">
+        <property name="text">
+         <string>Данные для исследований:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="sizeInfoGroupBox">
+        <property name="title">
+         <string>Размер поля</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <layout class="QHBoxLayout" name="horSizeHorizontalLayout">
+           <item>
+            <widget class="QLabel" name="horSizeInfoLabel">
+             <property name="text">
+              <string>По горизонтали</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="horSizeLabel">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="verSizeHorizontalLayout">
+           <item>
+            <widget class="QLabel" name="verSizeInfoLabel">
+             <property name="text">
+              <string>По вертикали</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="verSizeLabel">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="grafInfoGroupBox">
+        <property name="title">
+         <string>Граф</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <layout class="QHBoxLayout" name="countNodeHorizontalLayout">
+           <item>
+            <widget class="QLabel" name="countNodeInfoLabel">
+             <property name="text">
+              <string>Число вершин</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="countNodeLabel">
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="countConnectionHorizontalLayout">
+           <item>
+            <widget class="QLabel" name="countConnectionInfoLabel">
+             <property name="text">
+              <string>Число ребер</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="countConnectionLabel">
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="sumLengthConnectionGroupBox">
+        <property name="title">
+         <string>Суммарная длина связей</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <layout class="QHBoxLayout" name="startSumLengthConnectionhorizontalLayout">
+           <item>
+            <widget class="QLabel" name="startSumLengthConnectionInfoLabel">
+             <property name="text">
+              <string>Начальная</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="startSumLengthConnectionLabel">
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="endSumLengthConnectionhorizontalLayout">
+           <item>
+            <widget class="QLabel" name="endSumLengthConnectionInfoLabel">
+             <property name="text">
+              <string>Конечная</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="endSumLengthConnectionLabel">
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="timeWorkGroupBox">
+        <property name="title">
+         <string>Время работы</string>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_8">
+         <item>
+          <widget class="QLabel" name="timeInfoLabel">
+           <property name="text">
+            <string>Время</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="timeLabel">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>622</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="workAriaMenu">
+    <property name="title">
+     <string>Рабочее поле</string>
+    </property>
+    <addaction name="sizeWorkAriaAction"/>
+   </widget>
+   <widget class="QMenu" name="schemeMenu">
+    <property name="title">
+     <string>Схема</string>
+    </property>
+    <addaction name="editMatrixAction"/>
+    <addaction name="separator"/>
+    <addaction name="genSchemeAction"/>
+   </widget>
+   <widget class="QMenu" name="algoMenu">
+    <property name="title">
+     <string>Алгоритм</string>
+    </property>
+    <addaction name="runRandomAlgoAction"/>
+    <addaction name="grafWorkRunRandomAlgoAction"/>
+    <addaction name="separator"/>
+    <addaction name="settingGenAlgoAction"/>
+    <addaction name="separator"/>
+    <addaction name="runAlgoAction"/>
+    <addaction name="grafWorkAlgoAction"/>
+   </widget>
+   <widget class="QMenu" name="aboutMenu">
+    <property name="title">
+     <string>Помощь</string>
+    </property>
+    <addaction name="aboutAction"/>
+   </widget>
+   <addaction name="workAriaMenu"/>
+   <addaction name="schemeMenu"/>
+   <addaction name="algoMenu"/>
+   <addaction name="aboutMenu"/>
+  </widget>
+  <action name="sizeWorkAriaAction">
+   <property name="text">
+    <string>Размерность рабочего поля</string>
+   </property>
+  </action>
+  <action name="drawElementAction">
+   <property name="text">
+    <string>Раскраска элементов и цепей схемы</string>
+   </property>
+  </action>
+  <action name="editMatrixAction">
+   <property name="text">
+    <string>Редактировать матрицу смежности</string>
+   </property>
+  </action>
+  <action name="genSchemeAction">
+   <property name="text">
+    <string>Генерировать случайную схему</string>
+   </property>
+  </action>
+  <action name="runRandomAlgoAction">
+   <property name="text">
+    <string>Запуск алгоритма силовой релаксации</string>
+   </property>
+   <property name="visible">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="grafWorkRunRandomAlgoAction">
+   <property name="text">
+    <string>График работы алгоритма силовой релаксации</string>
+   </property>
+   <property name="visible">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="settingGenAlgoAction">
+   <property name="text">
+    <string>Настройки генетического алгоритма</string>
+   </property>
+   <property name="visible">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="runAlgoAction">
+   <property name="text">
+    <string>Запуск алгоритма</string>
+   </property>
+  </action>
+  <action name="grafWorkAlgoAction">
+   <property name="text">
+    <string>График работы алгоритма</string>
+   </property>
+  </action>
+  <action name="aboutAction">
+   <property name="text">
+    <string>О программе</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

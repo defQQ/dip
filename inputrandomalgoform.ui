@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>InputRandomAlgoForm</class>
+ <widget class="QWidget" name="InputRandomAlgoForm">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>218</width>
+    <height>102</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Ввод параметров случайного алгоритма</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="countIterationLabel">
+     <property name="text">
+      <string>Введите количество итераций</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="countIterationLineEdit"/>
+   </item>
+   <item>
+    <widget class="QPushButton" name="setCountIterationPushButton">
+     <property name="text">
+      <string>Ввести</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

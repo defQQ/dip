@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SettingGenAlgoDialog</class>
+ <widget class="QDialog" name="SettingGenAlgoDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Настройка алгоритма</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QGroupBox" name="settingGroupBox">
+     <property name="title">
+      <string>Настройки генетического алгоритма</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <layout class="QHBoxLayout" name="randomCrossingoverHorizontalLayout">
+        <item>
+         <widget class="QLabel" name="randomCrossingLabel">
+          <property name="text">
+           <string>Вероятность оператора кроссинговера (%)</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="randomCrossingSpinBox">
+          <property name="value">
+           <number>60</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="randomMutationHorizontalLayout">
+        <item>
+         <widget class="QLabel" name="randomMutationLabel">
+          <property name="text">
+           <string>Вероятность оператора мутации (%)</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="randomMutationSpinBox">
+          <property name="value">
+           <number>85</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="randomInversionHorizontalLayout">
+        <item>
+         <widget class="QLabel" name="randomInversionLabel">
+          <property name="text">
+           <string>Вероятность инверсии</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="randomInversionSpinBox">
+          <property name="value">
+           <number>50</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="counPopulationHorizontalLayout">
+        <item>
+         <widget class="QLabel" name="counPopulationLabel">
+          <property name="text">
+           <string>Численность популяции</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="counPopulationSpinBox">
+          <property name="value">
+           <number>30</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="counIterationHorizontalLayout">
+        <item>
+         <widget class="QLabel" name="counIterationLabel">
+          <property name="text">
+           <string>Число итераций</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="counIterationSpinBox">
+          <property name="maximum">
+           <number>9999</number>
+          </property>
+          <property name="value">
+           <number>100</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="selectionButtonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>selectionButtonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>SettingGenAlgoDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>selectionButtonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>SettingGenAlgoDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
